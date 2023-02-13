@@ -3,7 +3,7 @@
 
 <div id="chat-mensajes">
     <li class="list-group-item" *ngFor="let msg of mensajes">
-        {{msg.de}}:{{msg.body}}
+        {{msg.de}}:{{msg.body || msg.cuerpo}}
     </li>
 </div>
 
