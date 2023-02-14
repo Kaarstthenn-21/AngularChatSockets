@@ -9,12 +9,17 @@ import { WebsocketService } from 'src/app/services/websocket.service';
 export class MensajesComponent implements OnInit {
 
   constructor(
-    public wsService: WebsocketService
+    public wsService: WebsocketService,
+
   ) { }
 
   usuario = this.wsService.usuario?.nombre;
 
   ngOnInit(): void {
+  }
+
+  salir() {
+    this.wsService.logoutWS();
   }
 
 }
